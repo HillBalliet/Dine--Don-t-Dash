@@ -7,9 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DiningHallCell.h"
+#import "DiningHallViewController.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate, UITabBarControllerDelegate>{
+    DiningHallCell *cell;
+    DiningHallViewController *diningViewController;
+}
 
 @property (strong, nonatomic) UIWindow *window;
+
+- (void)setCell:(DiningHallCell *)newCell viewController: (DiningHallViewController *)newDiningViewController;
 
 @end
